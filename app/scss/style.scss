@@ -356,7 +356,7 @@
         color: #fff;
         margin-right: 45px;
         max-width: 262px;
-        
+
         span {
             @include f700;
         }
@@ -370,3 +370,42 @@
 }
 
 //author end
+//tutorial start
+
+.tutorial {
+    padding: 7y0px 0px 120px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item {
+        min-width: 370px;
+        width: 100%;
+    }
+}
+.tutorial__item{
+    &-images{
+min-height: 270px;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+max-width: 370px;
+    }
+    &-title{
+        background-color: #f8f8f8;
+        font-size: 24px;
+        text-align: center;
+        @include f700;
+        padding: 30px 10px;
+        color: $bg;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+//tutorial end
