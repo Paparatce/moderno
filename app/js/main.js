@@ -14,5 +14,13 @@ $('.rate-star').rateYo({
       slidesToShow:4,
       slidesToScroll:4,
   });
+  $(".js-range-slider").ionRangeSlider({
+    type: "double",
+    min: 0,
+    max: 600,
+    from: 0,
+    to: 600,
+    
+});
 
 
