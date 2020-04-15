@@ -23,6 +23,8 @@ body {
     font-size: 15px;
     line-height: 24px;
     color: $text;
+    
+   
 }
 
 .container {
@@ -114,4 +116,8 @@ body {
     left: 0;
     color: $green;
     }
+}
+body{
+    overflow-x: hidden;
+   
 }

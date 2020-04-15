@@ -3,6 +3,9 @@
 @import "fonts";
 
 // start header
+.header{
+    background-color: #fff;
+}
 .header__top-inner {
     display: flex;
     justify-content: space-between;
@@ -96,6 +99,7 @@
     }
 }
 .basket {
+    margin-right: 20px;
     span {
         background-color: $green;
     }
@@ -114,7 +118,7 @@
     align-items: center;
 }
 .user {
-    margin-left: 20px;
+   
     margin-right: 25px;
     padding-right: 25px;
     position: relative;
@@ -162,7 +166,7 @@
     transition: all 0.3s;
     height: 0px;
     overflow: hidden;
-    
+
     a {
         font-size: 12px;
         color: #546e7a;
@@ -177,7 +181,7 @@
     position: relative;
     margin-top: 40px;
     height: 90px;
-    
+
     &:hover {
         .user__menu {
             height: auto;
@@ -194,27 +198,25 @@
     border-top: 1px solid #e0e0e0;
     height: 0;
     overflow: hidden;
-    
+    z-index: 1;
 }
 .basket__box,
 .notification__box,
 .massange__box {
     margin-top: 54px;
     margin-left: 15px;
-  
+
     &:hover {
-        .header__circle::before{
+        .header__circle::before {
             color: $bg;
         }
         .circle__menu {
             overflow: hidden;
             height: auto;
-            
         }
-        .circle__item{
-            padding:23px 23px ;
+        .circle__item {
+            padding: 23px 23px;
             border-width: 1px;
-            
         }
     }
 }
@@ -225,13 +227,13 @@
     border-left-width: 1px;
     border-right-width: 1px;
     border-top: none;
-    padding:0 23px;
+    padding: 0 23px;
     display: flex;
     align-items: center;
     width: 269px;
     position: relative;
     transition: all 0.3s;
-    &::before{
+    &::before {
         position: absolute;
         top: 27px;
         right: 28px;
@@ -302,8 +304,12 @@
         line-height: 18px;
     }
 }
-.icons-color::before{
+.icons-color::before {
     color: $tomato;
+}
+.header__btn-menu,
+.menu__btn {
+    display: none;
 }
 // end header
 
@@ -1183,5 +1189,4 @@ button.icon-unsorted {
 }
 //product-page end
 
-
-@import 'media';
+@import "media";
