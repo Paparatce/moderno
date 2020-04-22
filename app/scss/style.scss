@@ -1873,6 +1873,39 @@ button.icon-unsorted {
         border: 1px solid #dedede;
         padding: 0px 10px;
     }
+    
+    .jq-selectbox {
+        max-width: 540px;
+        width: 100%;
+        &__select {
+            height: 40px;
+            padding: 0px 10px;
+            border: 1px solid #d7d7d7;
+            border-bottom-color: #d7d7d7;
+            border-radius: 0px;
+            background: #f9f9f9;
+            box-shadow: none;
+            font-family: "Roboto-Regular", sans-serif;
+            color: #707070;
+            text-shadow: none;
+            line-height: 40px;
+        }
+        &__trigger {
+            border-left: none;
+            &-arrow {
+                border: none;
+                top: 0;
+                right: 20px;
+                line-height: 40px;
+                font-size: 15px;
+                &::before {
+                    content: "\f0d7";
+
+                    font-family: "icomoon";
+                }
+            }
+        }
+    }
     select {
         max-width: 540px;
         width: 100%;
@@ -1881,6 +1914,7 @@ button.icon-unsorted {
         color: #707070;
         border: 1px solid #dedede;
         padding: 0px 10px;
+        
     }
 }
 //settings end
@@ -2105,9 +2139,6 @@ button.icon-unsorted {
         span {
             color: $green;
         }
-        &::placeholder {
-            color: #707070;
-        }
     }
     select,
     input,
@@ -2118,13 +2149,16 @@ button.icon-unsorted {
         height: 40px;
         background-color: #f9f9f9;
         padding: 0px 18px;
+        &::placeholder {
+            color: #707070;
+        }
     }
     textarea {
         resize: none;
         height: 150px;
         padding: 8px 18px;
     }
-    input[type="file"]{
+    input[type="file"] {
         outline: none;
     }
     .jq-file {
@@ -2148,7 +2182,6 @@ button.icon-unsorted {
             font-size: 12px;
             color: #707070;
             line-height: 40px;
-          
         }
         &__browse {
             top: 5px;
@@ -2200,4 +2233,131 @@ button.icon-unsorted {
 }
 
 //upload end
+//withdrawals start
+.withdrawals__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 11px;
+}
+.withdrawals__col {
+    max-width: 570px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #dedede;
+    height: 100%;
+    margin-bottom: 140px;
+}
+.withdrawals__title {
+    @include f500;
+    padding: 18px 32px 24px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 30px;
+    color: $bg;
+    font-size: 24px;
+}
+.withdrawals__content {
+    padding-left: 35px;
+    padding-right: 40px;
+    button {
+        margin-bottom: 50px;
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        cursor: pointer;
+    }
+}
+.withdrawals__form-line {
+    margin-bottom: 25px;
+    label {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        @include f500;
+        margin-bottom: 15px;
+        color: $bg;
+        span {
+            color: $green;
+        }
+    }
+    input,
+    select {
+        width: 100%;
+        display: block;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0px 18px;
+        &::placeholder {
+            color: #707070;
+        }
+    }
+    .jq-selectbox {
+        width: 100%;
+        &__select {
+            height: 40px;
+            padding: 0px 18px;
+            border: 1px solid #d7d7d7;
+            border-bottom-color: #d7d7d7;
+            border-radius: 0px;
+            background: #f9f9f9;
+            box-shadow: none;
+            font-family: "Roboto-Regular", sans-serif;
+            color: #707070;
+            text-shadow: none;
+            line-height: 40px;
+        }
+        &__trigger {
+            border-left: none;
+            &-arrow {
+                border: none;
+                top: 0;
+                right: 20px;
+                line-height: 40px;
+                font-size: 15px;
+                &::before {
+                    content: "\f0d7";
+
+                    font-family: "icomoon";
+                }
+            }
+        }
+    }
+}
+.withdrawals__content {
+    &-items {
+        padding-bottom: 35px;
+    }
+    &-item {
+        display: flex;
+        height: 42px;
+        align-items: center;
+        font-size: 13px;
+        color: #444;
+        &:nth-child(odd){
+            background-color: #f9f9f9;
+        }
+    }
+    &-date {
+        width: 154px;
+        padding-left: 20px;
+        @include f500;
+    }
+    &-email {
+        width: 180px;
+        @include f500;
+    }
+    &-price {
+        width: 70px;
+        @include f700;
+    }
+    &-status {
+        width: 88px;
+        @include f700;       
+        &.withdrawals__content-paid {
+            color: $green;
+        }
+    }
+}
+//withdrawals end
 @import "media";
