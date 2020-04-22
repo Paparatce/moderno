@@ -36,7 +36,7 @@ $(function () {
         $('.menu__list').slideToggle();
     });
 
-
+$('input[type="file"],select').styler();
 
     $('.header__btn-menu').on('click', function () {
         $('.header__box').toggleClass('active');
@@ -51,6 +51,8 @@ $(function () {
         return false;
     });
 
-
+    $(".login__wrapper").on("click", function (){
+        $(".modal").show(500);
+      });
     var mixer = mixitup('.products__inner-box')
 });
