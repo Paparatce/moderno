@@ -480,6 +480,11 @@
     padding: 110px 0px;
     background-color: $grey;
 }
+.products__wrapper,
+.product-slider__wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+}
 .products__inner-btn {
     text-align: center;
     margin-bottom: 60px;
@@ -500,12 +505,18 @@
 }
 .products__inner-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin-left: -30px;
     flex-wrap: wrap;
+}
+.products .product__item {
+    flex-basis: calc(25% - 30px);
+    margin-left: 30px;
 }
 .product__item {
     max-width: 442px;
     width: 100%;
+
     box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
     margin-bottom: 30px;
     &-img {
@@ -638,7 +649,7 @@
     justify-content: space-between;
 }
 .advantages__item {
-    min-width: 370px;
+    max-width: 370px;
     text-align: center;
     padding: 0px 15px;
 
@@ -737,13 +748,13 @@
 //tutorial start
 
 .tutorial {
-    padding: 7y0px 0px 120px;
+    padding: 70px 0px 120px;
     &__inner {
         display: flex;
         justify-content: space-between;
     }
     &__item {
-        min-width: 370px;
+        max-width: 370px;
         width: 100%;
     }
 }
@@ -753,7 +764,6 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        max-width: 370px;
     }
     &-title {
         background-color: #f8f8f8;
@@ -1148,9 +1158,10 @@ button.icon-unsorted {
 }
 .product-page__content {
     .product__item {
-        max-width: 270px;
+        flex-basis: calc(33.3333% - 30px);
         background-color: #fff;
         transition: all 0.5s;
+        margin-left: 30px;
     }
     .product__item-img {
         min-height: 180px;
@@ -1174,10 +1185,12 @@ button.icon-unsorted {
 }
 .product-page__items {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-left: -30px;
 }
+
 .pagination__list {
     li {
         display: inline-block;
@@ -1243,6 +1256,7 @@ button.icon-unsorted {
 .product__item {
     &.list {
         max-width: 100%;
+        flex-basis: 100%;
         .product__item-img {
             width: 240px;
             float: left;
@@ -1301,7 +1315,7 @@ button.icon-unsorted {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px 0;
+    padding: 16px;
 }
 .product-one__images {
     max-width: 829px;
@@ -1475,6 +1489,38 @@ button.icon-unsorted {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+    align-items: center;
+    .jq-selectbox {
+        width: 100%;
+        &__select {
+            height: 40px;
+            padding: 0px 25px;
+            border: 1px solid #d7d7d7;
+            border-bottom-color: #d7d7d7;
+            border-radius: 0px;
+            background: #f9f9f9;
+            box-shadow: none;
+            font-family: "Roboto-Regular", sans-serif;
+            color: #707070;
+            text-shadow: none;
+            line-height: 40px;
+        }
+        &__trigger {
+            border-left: none;
+            &-arrow {
+                border: none;
+                top: 0;
+                right: 20px;
+                line-height: 40px;
+                font-size: 15px;
+                &::before {
+                    content: "\f0d7";
+                    color: $green;
+                    font-family: "icomoon";
+                }
+            }
+        }
+    }
 }
 .price__product {
     font-size: 22px;
@@ -1873,7 +1919,7 @@ button.icon-unsorted {
         border: 1px solid #dedede;
         padding: 0px 10px;
     }
-    
+
     .jq-selectbox {
         max-width: 540px;
         width: 100%;
@@ -1914,7 +1960,6 @@ button.icon-unsorted {
         color: #707070;
         border: 1px solid #dedede;
         padding: 0px 10px;
-        
     }
 }
 //settings end
@@ -2334,7 +2379,7 @@ button.icon-unsorted {
         align-items: center;
         font-size: 13px;
         color: #444;
-        &:nth-child(odd){
+        &:nth-child(odd) {
             background-color: #f9f9f9;
         }
     }
@@ -2353,7 +2398,7 @@ button.icon-unsorted {
     }
     &-status {
         width: 88px;
-        @include f700;       
+        @include f700;
         &.withdrawals__content-paid {
             color: $green;
         }
